@@ -10,12 +10,12 @@ app.post('/message', (req, res) => {
     const client = require('twilio')(
         process.env.TWILIO_ACCOUNT_SID,
         process.env.TWILIO_AUTH_TOKEN
-      );
-      client.messages.create({
-        from: '17372141844',
-        to: '19174269339',
-        body: "Thank you for signing up for text messages from https://sprocketprinters.com. Reply HELP for help and STOP to cancel."
-      }).then((messsage) => console.log(message.sid));
+    );
+    client.messages.create({
+      from: '17372141844',
+      to: '19174269339',
+      body: "Thank you for signing up for text messages from https://sprocketprinters.com. Reply HELP for help and STOP to cancel."
+    }).then((messsage) => console.log(message.sid));
 
 })
 
